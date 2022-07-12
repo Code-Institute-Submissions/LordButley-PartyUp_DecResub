@@ -1,1 +1,1 @@
-web: gunicorn partyup.wsgi
+web: gunicorn codestar.wsgi
