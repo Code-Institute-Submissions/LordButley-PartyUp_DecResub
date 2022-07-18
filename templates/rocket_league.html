@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class ="image-container" id="rocket-league-image">
+</div>
+<div class="container-xl">
+    <table class="table table-dark">
+        <thead>
+            <th scope="col">Title</th>
+            <th scope="col">Created By</th>
+            <th scope="col">Latest update</th>
+        </thead>
+        <tbody>
+            
+            {% for post in post_list %}
+            <tr>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr>
+                <td>{{ post.author }} - {{ post.created_on }}</td>
+            </tr>
+            <tr>
+                <td>{{ post.most_recent }}</td>
+            </tr>
+            
+            {% endfor %}
+            
+        
+        </tbody>
+    </table>
+</div>
+
+{%endblock%}

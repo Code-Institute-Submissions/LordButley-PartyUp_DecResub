@@ -2,18 +2,29 @@
 
 {% block content %}
 
-<div class ="image-container" id="hero-image">
+<!-- <div class ="image-container" id="hero-image">
+</div> -->
+<div class="container-fluid container-xl headings">
+    <div class="row">
+        <div class="col">
+        <h1>Looking for players?</h1>
+        <h2>Find a gaming buddy here!</h2>
+        </div>
+    </div>
 </div>
+
+
+
 
 <div class="container-fluid container-xl">
     <div class="row">
         <div class="col-sm-4 game-tile">
-            <a href="#">
+            <a href="{% url 'rocket_league' %}">
                 <img alt="Rocket League" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658129225/Rocket_League_2_h6rlur.jpg">
              </a>
         </div>
         <div class="col-sm-4 game-tile">
-            <a href="#">
+            <a href="{% url 'dead_by_daylight' %}">
                 <img alt="Dead by Daylight" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658129226/dbd_wpibyd.jpg">
              </a>
         </div>
