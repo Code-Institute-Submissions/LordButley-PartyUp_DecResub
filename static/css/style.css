@@ -7,3 +7,11 @@
 h1 {
     color:chartreuse;
 }
+
+#hero-image-container {
+    width: 100%;
+    background-image : url("https://res.cloudinary.com/partyupcloud/image/upload/v1658127017/games-gb603789a9_1920_ar0poy.jpg");
+    height: 60vh;
+    background-size:cover;
+    background-position:center;
+}
