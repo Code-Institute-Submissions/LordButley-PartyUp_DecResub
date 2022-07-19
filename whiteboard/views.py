@@ -15,22 +15,28 @@ class GameList(generic.ListView):
     template_name = 'index.html'
 
 
+# class GameDetail(View, obj):
+
+
+#     def get(self, request, id):
+#         queryset = Post.objects.filter(game=obj.)
+
     
     # queryset = Game.objects.order_by('id')
 
 
-class DeadByDaylight(generic.ListView):
-    model = Post
-    queryset = Post.objects.order_by('-most_recent')
-    template_name = 'dead_by_daylight.html'
-    # paginate_by = 10
+# class DeadByDaylight(generic.ListView):
+#     model = Post
+#     queryset = Post.objects.order_by('-most_recent')
+#     template_name = 'dead_by_daylight.html'
+#     # paginate_by = 10
 
 
-class RocketLeague(generic.ListView):
-    model = Post
-    queryset = Post.objects.order_by('-most_recent')
-    template_name = 'rocket_league.html'
-    # paginate_by = 10
+# class RocketLeague(generic.ListView):
+#     model = Post
+#     queryset = Post.objects.order_by('-most_recent')
+#     template_name = 'rocket_league.html'
+#     # paginate_by = 10
 
 # class PostDetail(View):
 
