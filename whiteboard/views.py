@@ -20,3 +20,7 @@ class RocketLeague(generic.ListView):
     queryset = Post.objects.order_by('-most_recent')
     template_name = 'rocket_league.html'
     # paginate_by = 10
+
+# class PostDetail(View):
+
+#     def get(self, request, *args, **kwargs):
