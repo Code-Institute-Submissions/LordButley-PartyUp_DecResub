@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment, Games
+from .models import Post, Comment, Game
 # Register your models here.
 
 @admin.register(Post)
@@ -10,8 +10,8 @@ class PostAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_filter = ('created_on',)
 
-@admin.register(Games)
-class GamesAdmin(admin.ModelAdmin):
+@admin.register(Game)
+class GameAdmin(admin.ModelAdmin):
     list_filter = ('id',)
 
     
