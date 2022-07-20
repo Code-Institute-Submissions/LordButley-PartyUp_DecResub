@@ -15,11 +15,56 @@ class GameList(generic.ListView):
     template_name = 'index.html'
 
 
-# class GameDetail(View, obj):
 
 
-#     def get(self, request, id):
-#         queryset = Post.objects.filter(game=obj.)
+
+class GamePostList(View):
+
+      def get(self, request, ref_name):
+        game_obj= Game.objects.get(ref_name=ref_name)
+        post = Post.objects.filter(game=game_obj)
+
+        return render(request, 'game_page.html',
+            {
+                "post": post,
+                "game": game_obj
+            },
+        )
+
+        # queryset = Post.objects.filter
+
+
+# class GamePostList(generic.ListView):
+
+#     template_name = 'game_page.html'
+#     model = Post
+#     queryset = Post.objects.filter(Post.game.ref_name =  )
+
+#     def get_queryset(self):
+#         content = {
+#             'game': self.kwargs['game'],
+#             'post': Review.objects.filter(game__name=self.kwargs['game'])
+#             .filter(status=1),
+#         }
+
+#         return content
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         post_exists = Post.objects.filter(name=self.kwargs['game']).exists()
+#         context['genre_exists'] = genre_exists
+#         return context
+
+
+
+
+# class GamePosts(View, game):
+
+#      def get(self, request, game.id):
+#          queryset = Post.objects.filter(game.ref_name)
+
+
+         
 
     
     # queryset = Game.objects.order_by('id')
@@ -36,7 +81,7 @@ class GameList(generic.ListView):
 #     model = Post
 #     queryset = Post.objects.order_by('-most_recent')
 #     template_name = 'rocket_league.html'
-#     # paginate_by = 10
+    # paginate_by = 10
 
 # class PostDetail(View):
 

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class ="image-container" id="dbd-image">
+</div>
+<div class="container-xl">
+    <table class="table table-dark">
+        <thead>
+            <th scope="col">Title</th>
+            <th scope="col">Created By</th>
+            <th scope="col">Latest update</th>
+        </thead>
+        <tbody>
+            
+            {% for post in post_list %}
+            <tr>
+                <td>{{ post.title }}</td>
+            </tr>
+            <tr>
+                <td>{{ post.author }} - {{ post.created_on }}</td>
+            </tr>
+            <tr>
+                <td>{{ post.most_recent }}</td>
+            </tr>
+            
+            {% endfor %}
+            
+        
+        </tbody>
+    </table>
+</div>
+
+{%endblock%}
+
+<!-- 
+<div class="container-fluid container-xl">
+    <div class="row">
+        <div class="col-sm-4 game-tile">
+            <a href="{% url 'rocket_league' %}">
+                <img alt="Rocket League" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658129225/Rocket_League_2_h6rlur.jpg">
+             </a>
+        </div>
+        <div class="col-sm-4 game-tile">
+            <a href="{% url 'dead_by_daylight' %}">
+                <img alt="Dead by Daylight" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658129226/dbd_wpibyd.jpg">
+             </a>
+        </div>
+        <div class="col-sm-4 game-tile">
+            <a href="#">
+                <img alt="Halo Infinite" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658129226/haloinfinite_zzld1t.jpg">
+             </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 game-tile">
+            <a href="#">
+                <img alt="Fall Guys" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658132762/fallguys_b14ao8.jpg">
+             </a>
+        </div>
+        <div class="col-sm-4 game-tile">
+            <a href="#">
+                <img alt="League of Legends" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658132762/valorant_zwkeoh.jpg">
+             </a>
+        </div>
+        <div class="col-sm-4 game-tile">
+            <a href="#">
+                <img alt="Valorant" src="https://res.cloudinary.com/partyupcloud/image/upload/v1658132762/lol_l8ejga.jpg">
+             </a>
+        </div>
+    </div>
+</div> -->
