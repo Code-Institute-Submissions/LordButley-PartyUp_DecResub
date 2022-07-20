@@ -21,6 +21,23 @@ class GamePostList(View):
                         },
                 )
 
+class GameComment(View):
+
+    def get(self, request, id):
+      post = get_object_or_404(Post, id = id)
+      comments = post.comments.order_by("-created_on")
+
+      return render(request, 'post_page',
+          {
+              "post": post,
+              "comments": comments,
+              
+          }
+      
+      )
+
+
+
 # class MenuList(View):
     
 

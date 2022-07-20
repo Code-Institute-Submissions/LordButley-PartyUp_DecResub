@@ -16,7 +16,11 @@
             
             {% for post in post_list %}
             <tr>
-                <td>{{ post.title }}</td>
+                <td>
+                    <a href = "{% url 'post_page' post.id %}">
+                        {{ post.title }}
+                    </a>
+                </td>
             </tr>
             <tr>
                 <td>{{ post.author }} - {{ post.created_on }}</td>
