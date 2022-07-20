@@ -16,15 +16,15 @@
                         Games
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
-                     
-                        {% for game in game_list %}
+                        
+                        {% for gamename, ref in nav_games %}
 
                         <li>
-                            <a class="dropdown-item" href="{% url 'game_page' game.ref_name %}">{{game.title}}</a>
+                            <a class="dropdown-item" href="{% url 'game_page' ref %}">{{gamename}}</a>
                         </li>
-                        
-                        
+
                         {% endfor %}
+
                         
                     </ul>
                 </li>

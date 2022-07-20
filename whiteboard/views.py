@@ -21,15 +21,15 @@ class GamePostList(View):
                         },
                 )
 
-class MenuList(View):
+# class MenuList(View):
     
 
-    def get(self, request, ref_name):
-        game_obj= Game.objects.get(ref_name=ref_name)
+#     def get(self, request, ref_name):
+#         game_obj= Game.objects.get(ref_name=ref_name)
 
-        return render(request, 'nav.html',
-                        {
-                        "game": game_obj
-                        },
-                )
+#         return render(request, 'nav.html',
+#                         {
+#                         "game": game_obj
+#                         },
+#                 )
 
