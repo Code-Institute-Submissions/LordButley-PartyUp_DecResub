@@ -25,7 +25,7 @@ body {
     height: 60vh;    
 }
 
-/* #dbd-image{
+#dbd-image{
     background-image: url("https://res.cloudinary.com/partyupcloud/image/upload/v1658154932/banner-dbd_hcubfq.jpg");
     height: 20vh;
 }
@@ -36,7 +36,7 @@ body {
     background-position:bottom;
     background-size: contain;
     background-repeat: no-repeat;
-} */
+} 
 
 .game-tile {
     justify-content: center;

@@ -14,10 +14,6 @@ class GameList(generic.ListView):
     model = Game
     template_name = 'index.html'
 
-
-
-
-
 class GamePostList(View):
 
       def get(self, request, ref_name):
@@ -25,11 +21,23 @@ class GamePostList(View):
         post = Post.objects.filter(game=game_obj)
 
         return render(request, 'game_page.html',
-            {
-                "post": post,
-                "game": game_obj
-            },
-        )
+                        {
+                        "post": post,
+                        "game": game_obj
+                        },
+                )
+
+class MenuList(View):
+    
+
+    def get(self, request, ref_name):
+        game_obj= Game.objects.get(ref_name=ref_name)
+
+        return render(request, 'nav.html',
+                        {
+                        "game": game_obj
+                        },
+                )
 
         # queryset = Post.objects.filter
 

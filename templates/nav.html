@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-sm">
+    <div class="container-xl">
+        <a href="{% url 'home' %}" class="navbar-brand">Party Up</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+            <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Games
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
+                     
+                        {% for game in game_list %}
+
+                        <li>
+                            <a class="dropdown-item" href="{% url 'game_page' game.ref_name %}">{{game.title}}</a>
+                        </li>
+                        
+                        
+                        {% endfor %}
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" class="btn btn-outline-light">Sign In</button>
+        <button type="button" class="btn btn-outline-light">Register</button>
+</nav>
