@@ -4,6 +4,19 @@
 
 <div class="container-xl">
     <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+    <table>
+    {% for comment in comments %}
+    <tr>
+        <td>{{ comment.content }}</td>
+        <td>{{ comment.author }} </td>
+        <td>{{ comment.created_on }}</td>
+    </tr>
+    
+    {% endfor %}
+    </table>
+
+
 </div>
 
 {%endblock%}

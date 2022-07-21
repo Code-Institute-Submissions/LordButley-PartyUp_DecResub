@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Game, Comment
+from .forms import PostForm, CommentForm
 
 # Create your views here.
 
@@ -32,7 +33,8 @@ class GameComment(View):
         return render(request, 'post_page.html',
             {
               "post": post,
-              "comment": comments,
+              "comments": comments,
+              "comment_form": CommentForm()
             }
       
         )
