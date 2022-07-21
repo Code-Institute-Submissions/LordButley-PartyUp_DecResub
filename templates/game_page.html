@@ -14,19 +14,15 @@
         </thead>
         <tbody>
             
-            {% for post in post_list %}
+            {% for x in post %}
             <tr>
                 <td>
-                    <a href = "{% url 'post_page' post.id %}">
-                        {{ post.title }}
+                    <a href = "{% url 'post_page' x.id %}">
+                        {{ x.title }}
                     </a>
                 </td>
-            </tr>
-            <tr>
-                <td>{{ post.author }} - {{ post.created_on }}</td>
-            </tr>
-            <tr>
-                <td>{{ post.most_recent }}</td>
+                <td>{{ x.author }} - {{ x.created_on }}</td>
+                <td>{{ x.most_recent }}</td>
             </tr>
             
             {% endfor %}

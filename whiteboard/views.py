@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post, Game
+from .models import Post, Game, Comment
 
 # Create your views here.
 
@@ -10,43 +10,31 @@ class GameList(generic.ListView):
 
 class GamePostList(View):
 
-      def get(self, request, ref_name):
+    def get(self, request, ref_name):
         game_obj= Game.objects.get(ref_name=ref_name)
+
         post = Post.objects.filter(game=game_obj)
 
         return render(request, 'game_page.html',
-                        {
-                        "post": post,
-                        "game": game_obj
-                        },
-                )
+            {
+                "post": post,
+                "game": game_obj
+            },
+        )
 
 class GameComment(View):
 
     def get(self, request, id):
-      post = get_object_or_404(Post, id = id)
-      comments = post.comments.order_by("-created_on")
+        post = get_object_or_404(Post, id=id)
+        comments = Comment.objects.filter(post=post)
+        # comments = post.comments.order_by("-created_on")
 
-      return render(request, 'post_page',
-          {
+        return render(request, 'post_page.html',
+            {
               "post": post,
-              "comments": comments,
-              
-          }
+              "comment": comments,
+            }
       
-      )
+        )
 
-
-
-# class MenuList(View):
-    
-
-#     def get(self, request, ref_name):
-#         game_obj= Game.objects.get(ref_name=ref_name)
-
-#         return render(request, 'nav.html',
-#                         {
-#                         "game": game_obj
-#                         },
-#                 )
 
