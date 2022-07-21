@@ -18,4 +18,3 @@ class GameAdmin(admin.ModelAdmin):
 
 
 
-# admin.site.register(Post)
