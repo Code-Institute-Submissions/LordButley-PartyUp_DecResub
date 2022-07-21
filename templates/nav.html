@@ -30,7 +30,16 @@
                 </li>
             </ul>
         </div>
-
-        <button type="button" class="btn btn-outline-light">Sign In</button>
-        <button type="button" class="btn btn-outline-light">Register</button>
+        {% if user.is_authenticated %}
+        <button type="button" class="btn btn-outline-light">
+            <a href="{% url 'account_logout' %}">Logout</a>
+        </button>
+        {% else %}
+        <button type="button" class="btn btn-outline-light">
+            <a href="{% url 'account_signup' %}">Register</a>
+        </button>
+        <button type="button" class="btn btn-outline-light">
+            <a href="{% url 'account_login' %}">Login</a>
+        </button>
+        {% endif %}
 </nav>
