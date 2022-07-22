@@ -2,6 +2,17 @@
 
 Welcome to Party Up! 
 
+Any gamer will tell you about the dangers of "solo queuing" and how quickly it can erode the ranks that you've diligently earned. We here at Party up want to remind you of something we all forgot a long time ago, before the COVID, before the internet, before God of War: Video games are better with your friends!
+
+Enter Party Up! The one stop shop for :
+
+* Meeting likeminded gamers and making friends
+* Putting together crack squads to push the limits of your skill level and boost your ranking
+* Trophy Hunting or Achievement Unlocking. Here you can team up and smash out those multiplayer goals with ease.
+* Fun - so you don't want a new BFF, nor care about high-level gaming. That's alright. Here you can find other people who also just want to mess around
+
+Party Up is a full-stack software development project that has been built using Django and Bootstrap frameworks, with additional HTML, CSS and JavaScript. 
+
 <!-- As all developers will tell you, being able to type quickly and accurately is an invaluable skill. Not staring at your index fingers whilst trying to work out where the missing semi-colon is actually really useful!
 
 And what else do developers love? Gamification! Introducing TypeKwondo, where you get to improve your typing skills, whilst competitively playing a typing game in a theme of your choosing. On top of this, you can also compare your scores with the leaderboard and try and make it into the top 5 best typers ever (*not an official title)  -->
@@ -14,35 +25,48 @@ You can visit the live website [here](https://partyupgaming.herokuapp.com/)
 
 # UX
 
-## Project Goals
+The project has been completed using the core UX principles to ensure an efficient and easy to use app was created that had a distinct purpose and provided satisfaction to users
 
-<!-- * Create a user-friendly program.
-* Create a game that is straight forward to start, play and restart.
-* Create a game that has additional benefits to the user.
-* Ensure that questions are randomised and not repeated
-* Provide the user with feedback on their progress through the program and through the game. 
-* Catch all incorrect inputs that may break the program
-* Give the user a choice of difficulty setting
-* Give the user a choice of questions
-* Create a database for the storage of user scores
-* Provide the user with their score as well as the top 5 scores of all users. -->
+## Strategy 
 
-## User Stories
-
-<!-- * As a user visiting the site for the first time, I want to be able to navigate the program intuitively.
-* As a user visiting the site for the first time, I want to be able to play the game quickly and easily. 
-* As a user, I want to be provided with feedback such as correct answers.
-* As a user, I want to be able to choose a theme of questions.
-* As a user, I want to be able to set the difficulty of the quiz
-* As a user, I want the questions to be randomised to keep the game interesting.
-* As a user, I do not want to break the program by putting in unexpected inputs. -->
+Goals -
+Mobile first design
+Agile work
 
 ## Target Audience
 
-<!-- The target audience of this website is any person who :
+The target audience of this website is any person who :
 
-* enjoys games
-* want to improve their typing ability -->
+* enjoys online video games
+* wants to meet other gamers and make friends
+* is looking for a team mate for ranked play
+* is looking for a team mate for trophy/achievement hunting
+
+
+## User Stories
+
+* As an unregistered user I can view each post on the website so that I can select one to read and decide whether to sign up
+* As a user I can navigate intuitively so that I can view the desired content
+* As a logged in user I can change the details on my profile page so that all my details and information are up to date
+* As a logged in user I can view my profile page so that I can see my personal account details
+* As an admin I can create, remove, update or delete posts so that I can ensure site content is relevant and inoffensive
+* As an Admin I can log out of the admin panel so that I can disconnect from the website
+* As an admin I can log in so that I can access the sites backend
+* As a user I can access social media accounts connected to the website so that I may learn more about the company
+* As a user I can quickly identify the purpose of the website from the landing page so that determine if the website is relevant to me
+* As a registered user I can login and logout of my account so that I can access and keep secure my data
+* As a registered user I can set a password so that so that my account is secure
+* As a registered user I can request a new password in case I forget my own so that I can regain access to my account
+* As a user I can contact the website so that I can provide feedback or present queries
+* As an unregistered user I can create an account so that I can interact fully with the website
+* As an unregistered user I can easily find the sign up page so that I can register and interact with the website
+* As a user I can fill in my personal details on my account page so that I can auto populate forms with my information on the site
+* As a registered user I can delete my account so that ensure my details are removed after I no longer want to use it
+* As a registered user I can comment on posts so that I can connect with other gamers
+* As a registered user I can delete my posts so that my post are no longer visible and I will receive no further messages
+* As a registered user I can update my posts so that I can keep my posts relevant and up to date with information
+* As a registered user I can create posts so that I can find other gamers who want to achieve the same things
+* As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
 ## Structure
 
