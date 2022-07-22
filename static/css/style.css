@@ -18,7 +18,7 @@ body {
     background-position:center;
 }
 
-#hero-image{
+/* #hero-image{
     background-image : url("https://res.cloudinary.com/partyupcloud/image/upload/v1658131644/crossplay_hso3d7.avif");
     height: 60vh;    
 }
@@ -34,14 +34,37 @@ body {
     background-position:bottom;
     background-size: contain;
     background-repeat: no-repeat;
-} 
+}  */
+
+/* .col-sm-4 img{
+    max-height: 50vh;
+    object-fit: cover;
+
+} */
 
 .game-tile {
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     margin-bottom: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+/* 
+.cards{
+
+    transition: all 0.2s ease;
+    cursor: pointer;
     
+    
+
+  }
+     */
+
+
+.game-tile:hover{
+
+    /* box-shadow: 5px 6px 6px 2px #e9ecef; */
+    transform: scale(1.1);
 }
 
 .game-tile img {

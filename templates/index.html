@@ -14,7 +14,7 @@
 <div class="container-fluid container-xl">
     <div class="row">
     {% for game in game_list %}
-        <div class="col-sm-4 game-tile">
+        <div class="col-sm-4 game-tile pulse">
             <a href="{% url 'game_page' game.ref_name %}">
                 <img alt="{{game.title}}" src={{game.image.url}}>
             </a>
