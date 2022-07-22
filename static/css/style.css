@@ -13,8 +13,6 @@ body {
 
 .image-container {
     width: 100%;
-    
-    /* background-size:cover; */
     background-position:center;
 }
 
@@ -49,17 +47,6 @@ body {
     transition: all 0.2s ease;
     cursor: pointer;
 }
-/* 
-.cards{
-
-    transition: all 0.2s ease;
-    cursor: pointer;
-    
-    
-
-  }
-     */
-
 
 .game-tile:hover{
 
