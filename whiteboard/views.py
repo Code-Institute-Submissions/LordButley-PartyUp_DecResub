@@ -20,8 +20,31 @@ class GamePostList(View):
             {
                 "post": post,
                 "game": game_obj
+                # "post_form": PostForm()
             },
         )
+
+    # def post(self, request, ref_name):
+    #     game_obj= Game.objects.get(ref_name=ref_name)
+
+    #     post = Post.objects.filter(game=game_obj)
+
+    #     return render(request, 'game_page.html',
+    #         {
+    #             "post": post,
+    #             "game": game_obj
+    #             "post_form": PostForm()
+    #         },
+    #     )
+
+    #     post_form = PostForm(data=request.POST)
+    #     if post_form.is_valid():
+    #         post_form.instance.name = request.user.username
+    #         post = post_form.save(commit=False)
+    #         # comment.post = post
+    #         post.save()
+    #     else:
+    #         post_form = PostForm()
 
 class GameComment(View):
 
@@ -61,6 +84,18 @@ class GameComment(View):
             }
       
     )
+
+
+class CreatePost(View):
+
+    def get(self, request):
+        # model = Post()
+
+        return render(request, 'create_post.html',
+        {
+            "post_form": PostForm()
+        }
+        )
 
 
 

@@ -6,6 +6,11 @@
     <img alt="{{game.title}}" src={{game.banner.url}}>
 </div>
 <div class="container-xl">
+    <button>
+        <a href="{% url 'create_post' %}">
+            Create New Post
+        </a>
+    </button>
     <table class="table table-dark">
         <thead>
             <th scope="col">Title</th>
