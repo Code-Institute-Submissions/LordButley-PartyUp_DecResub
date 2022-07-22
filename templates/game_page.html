@@ -6,11 +6,22 @@
     <img alt="{{game.title}}" src={{game.banner.url}}>
 </div>
 <div class="container-xl">
+    {% if user.is_authenticated %}
     <button>
         <a href="{% url 'create_post' %}">
             Create New Post
         </a>
     </button>
+    {% else %}
+    <h2>Sign up or login in to post</h2>
+    <button type="button" class="btn btn-outline-light">
+        <a href="{% url 'account_signup' %}">Register</a>
+    </button>
+    <button type="button" class="btn btn-outline-light">
+        <a href="{% url 'account_login' %}">Login</a>
+    </button>
+    {% endif %}
+
     <table class="table table-dark">
         <thead>
             <th scope="col">Title</th>

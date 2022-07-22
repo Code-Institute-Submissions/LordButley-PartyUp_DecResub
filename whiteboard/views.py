@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post, Game, Comment
 from .forms import PostForm, CommentForm
+from django.contrib.auth import get_user
 
 # Create your views here.
 
@@ -90,6 +91,23 @@ class CreatePost(View):
 
     def get(self, request):
         # model = Post()
+
+        return render(request, 'create_post.html',
+        {
+            "post_form": PostForm()
+        }
+        )
+
+    def post(self, request):
+        # model = Post()
+        post_form = PostForm(data=request.POST)
+        if post_form.is_valid():
+            post_form.instance.name = request.user.username
+            post = post_form.save(commit=False)
+            post.author = get_user(request)
+            post.save()
+        else:
+            post_form = PostForm()
 
         return render(request, 'create_post.html',
         {
