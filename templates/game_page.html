@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="container-xl"  id="{{game.ref_name}}-image">
-    <img alt="{{game.title}}" src={{game.banner.url}}>
+<div class="container-xl"  id="banner-image">
+    <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
 </div>
 <div class="container-xl">
     {% if user.is_authenticated %}
