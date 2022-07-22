@@ -8,7 +8,7 @@
 <div class="container-xl">
     {% if user.is_authenticated %}
     <button>
-        <a href="{% url 'create_post' %}">
+        <a href="{% url 'create_post' game.ref_name %}">
             Create New Post
         </a>
     </button>

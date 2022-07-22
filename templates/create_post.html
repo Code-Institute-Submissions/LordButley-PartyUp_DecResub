@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 {% load crispy_forms_tags %}
-
+<div class="container-xl"  id="{{game.ref_name}}-image">
+    <img alt="{{game.title}}" src={{game.banner.url}}>
 
 <form method="post">
     {{ post_form | crispy }}
@@ -19,6 +20,6 @@
     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
 
   </form>
-
+</div>
 
 {% endblock %}

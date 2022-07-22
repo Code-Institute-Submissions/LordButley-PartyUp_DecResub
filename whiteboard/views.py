@@ -89,23 +89,29 @@ class GameComment(View):
 
 class CreatePost(View):
 
-    def get(self, request):
+    def get(self, request, ref_name):
         # model = Post()
+        game_obj= Game.objects.get(ref_name=ref_name)
 
         return render(request, 'create_post.html',
         {
-            "post_form": PostForm()
+            "post_form": PostForm(),
+            "game": game_obj
         }
         )
 
-    def post(self, request):
+    def post(self, request, ref_name):
         # model = Post()
+        game_obj= Game.objects.get(ref_name=ref_name)
+
         post_form = PostForm(data=request.POST)
         if post_form.is_valid():
             post_form.instance.name = request.user.username
             post = post_form.save(commit=False)
             post.author = get_user(request)
+            post.game = Game.objects.get(ref_name=ref_name)
             post.save()
+
         else:
             post_form = PostForm()
 
