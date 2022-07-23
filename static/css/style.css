@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+
 
 * {
-    font-family: 'Permanent Marker', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
 } 
 
-/* .headings{
-    color: #fff;
-    text-align: center;
-} */
+.font-pm {
+    font-family: 'Permanent Marker', sans-serif;
+}
 
 body {
     padding-top: 56px;
@@ -82,7 +83,7 @@ body {
 }
 
 footer i {
-    color:#fff;
+    color:#eeeeee;
     font-size: x-large;
     padding: 5px;
     margin: 5px;
