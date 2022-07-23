@@ -31,15 +31,13 @@
             </ul>
         </div>
         {% if user.is_authenticated %}
-        <button type="button" class="btn btn-outline-light">
-            <a href="{% url 'account_logout' %}">Logout</a>
-        </button>
+        
+        <a class="btn btn-outline-light bg-custom" href="{% url 'account_logout' %}">Logout</a>
+    
         {% else %}
-        <button type="button" class="btn btn-outline-light">
-            <a href="{% url 'account_signup' %}">Register</a>
-        </button>
-        <button type="button" class="btn btn-outline-light">
-            <a href="{% url 'account_login' %}">Login</a>
-        </button>
+        <a class="btn btn-outline-light bg-custom mx-1" href="{% url 'account_signup' %}">Logout</a>
+
+        <a class="btn btn-outline-light bg-custom mx-1" href="{% url 'account_login' %}">Logout</a>
+
         {% endif %}
 </nav>

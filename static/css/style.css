@@ -28,6 +28,10 @@ body {
     background-size: contain;
 }
 
+.bg-custom {
+    background-color: #eeeeee; !important
+}
+
 
 /* #hero-image{
     background-image : url("https://res.cloudinary.com/partyupcloud/image/upload/v1658131644/crossplay_hso3d7.avif");
