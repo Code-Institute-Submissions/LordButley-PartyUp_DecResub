@@ -4,18 +4,36 @@
 {% load crispy_forms_tags %}
 
 <div class="container-xl">
-    <h1>{{post.title}}</h1>
-    <p>{{post.content}}</p>
-    <table>
+
+    <div class="card text-white bg-dark mb-3" >
+        <div class="card-header"><h1>{{post.title}}</h1></div>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Dark card title</h5> -->
+          <p class="card-text">{{post.content}}</p>
+        </div>
+      </div>
+
+    <!-- <h1>{{post.title}}</h1>
+    <p>{post.content}}</p> -->
+    <!-- <table> -->
     {% for comment in comments %}
-    <tr>
+    <!-- <tr>
         <td>{{ comment.content }}</td>
         <td>{{ comment.author }} </td>
         <td>{{ comment.created_on }}</td>
-    </tr>
+    </tr> -->
     
+    <div class="card text-white bg-dark mb-3" >
+        <div class="card-header">By {{comment.name}} on {{comment.created_on}}</div>
+        <div class="card-body">
+          <!-- <h5 class="card-title">Dark card title</h5> -->
+          <p class="card-text">{{comment.content}}</p>
+        </div>
+      </div>
+      
+
     {% endfor %}
-    </table>
+    <!-- </table> -->
     {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>

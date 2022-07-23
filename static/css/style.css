@@ -8,13 +8,26 @@
 } */
 
 body {
-    padding-top: 70px;
+    padding-top: 56px;
 }
 
 .image-container {
     width: 100%;
     background-position:center;
 }
+
+.middle-banner {
+    height: 56px;
+    min-height: 100%;
+    width: 100%
+}
+
+
+#index-background-image{
+    background-image: url("https://res.cloudinary.com/partyupcloud/image/upload/v1658577580/cool-background_suzhkt.png");
+    background-size: contain;
+}
+
 
 /* #hero-image{
     background-image : url("https://res.cloudinary.com/partyupcloud/image/upload/v1658131644/crossplay_hso3d7.avif");

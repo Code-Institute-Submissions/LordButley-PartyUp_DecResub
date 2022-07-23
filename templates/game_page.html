@@ -7,8 +7,8 @@
 </div>
 <div class="container-xl">
     {% if user.is_authenticated %}
-    <button>
-        <a href="{% url 'create_post' game.ref_name %}">
+    <button class = "btn btn-light btn-lg btn-block mt-2 mb-2">
+        <a class = "link-dark" href="{% url 'create_post' game.ref_name %}">
             Create New Post
         </a>
     </button>
