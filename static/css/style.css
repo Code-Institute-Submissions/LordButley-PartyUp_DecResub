@@ -1,6 +1,8 @@
-/* * {
-    color: #fff;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    font-family: 'Permanent Marker', sans-serif;
+} 
 
 /* .headings{
     color: #fff;
@@ -29,7 +31,7 @@ body {
 }
 
 .bg-custom {
-    background-color: #eeeeee; !important
+    background-color: #eeeeee !important;
 }
 
 
