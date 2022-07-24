@@ -6,12 +6,12 @@
 </div>
 <!-- <div class="container-xl"  id="{{game.ref_name}}-image">
     <img class="image-fluid" alt="{{game.title}}" src={{game.banner.url}}> -->
-<div class="container-xl">
+<div class="container-xl text-light">
 <form method="post">
     {{ post_form | crispy }}
     {% csrf_token %}
     
-    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+    <button type="submit" class="btn btn-signup btn-lg btn-light">Submit</button>
 
   </form>
 </div>

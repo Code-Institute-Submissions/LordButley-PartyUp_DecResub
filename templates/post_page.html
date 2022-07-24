@@ -3,12 +3,12 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container-xl">
+<div class="container-xl text-light">
 
   <div class="container-xl"  id="banner-image">
     <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
   </div>
-  
+
     <div class="card text-black bg-light mb-3" >
         <div class="card-header"><h1>{{post.title}}</h1></div>
         <div class="card-body">
@@ -45,7 +45,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-signup btn-lg btn-light">Submit</button>
                 </form>
                 {% endif %}
 
