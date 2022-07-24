@@ -114,7 +114,7 @@ class EditPost(View):
         game_obj = post.game
         return render(request, 'edit_post.html',
         {
-            "post_form": PostForm(),
+            "post_form": PostForm(instance=post),
             "post": post,
             "game": game_obj
         }
@@ -126,10 +126,10 @@ class EditPost(View):
 
         post_form = PostForm(data=request.POST)
         if post_form.is_valid():
-            # post_form.instance.name = request.user.username
+            post_form.instance.name = request.user.username
             post = post_form.save(commit=False)
-            # post.author = get_user(request)
-            # post.game = game_obj
+            post.author = get_user(request)
+            post.game = game_obj
             post.save()
             url = request.POST.get("url")
             return redirect(reverse("game_page", args=(url,)))
