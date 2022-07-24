@@ -1,7 +1,7 @@
 <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-sm">
     <div class="container-xl">
-        <a href="{% url 'home' %}" class="navbar-brand fs-3 font-pm">
-            <i class="bi bi-joystick"></i> Party Up! <i class="bi bi-joystick"></i>
+        <a href="{% url 'home' %}" class="navbar-brand fs-3">
+            <i class="bi bi-joystick"></i><span class="highlighter font-pm"> Party Up! </span><i class="bi bi-joystick"></i>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
@@ -15,7 +15,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light fw-bold" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Games
+                        <span class="highlighter">Games</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink">
                         
@@ -34,12 +34,12 @@
         </div>
         {% if user.is_authenticated %}
         
-        <a class="btn btn-outline-light bg-custom text-dark" href="{% url 'account_logout' %}">Logout</a>
+        <a class="btn btn-outline-light bg-custom text-dark" href="{% url 'account_logout' %}"><span class="highlighter">Logout</span></a>
     
         {% else %}
-        <a class="btn bg-custom mx-1 text-dark" href="{% url 'account_signup' %}">Register</a>
+        <a class="btn bg-custom mx-1 text-dark" href="{% url 'account_signup' %}"><span class="highlighter">Register</span></a>
 
-        <a class="btn bg-custom mx-1 text-dark" href="{% url 'account_login' %}">Login</a>
+        <a class="btn bg-custom mx-1 text-dark" href="{% url 'account_login' %}"><span class="highlighter">Login</span></a>
 
         {% endif %}
 </nav>

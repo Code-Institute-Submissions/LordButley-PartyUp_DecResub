@@ -50,8 +50,6 @@ body {
 }
 
 .game-tile:hover{
-
-    /* box-shadow: 5px 6px 6px 2px #e9ecef; */
     transform: scale(1.1);
 }
 
@@ -68,6 +66,11 @@ footer i {
     font-size: x-large;
     padding: 5px;
     margin: 5px;
+}
+
+.highlighter i:hover,
+.highlighter:hover{
+    color:crimson !important;
 }
 
 
