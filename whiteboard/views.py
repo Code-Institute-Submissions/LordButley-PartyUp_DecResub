@@ -70,7 +70,6 @@ class CreatePost(View):
 
     def get(self, request, ref_name):
         game_obj= Game.objects.get(ref_name=ref_name)
-
         return render(request, 'create_post.html',
         {
             "post_form": PostForm(),
@@ -95,6 +94,49 @@ class CreatePost(View):
             post_form = PostForm()
 
         return render(request, 'create_post.html',
+        {
+            "post_form": PostForm()
+        }
+        )
+
+# class EditPost(UpdateView):
+#     '''
+#     View to update a recipe if user is logged in.
+#     '''
+#     model = Post
+#     template_name = 'edit_post.html'
+#     form_class = EditForm
+
+class EditPost(View):
+
+    def get(self, request, id):
+        post = get_object_or_404(Post, id=id)
+        game_obj = post.game
+        return render(request, 'edit_post.html',
+        {
+            "post_form": PostForm(),
+            "post": post,
+            "game": game_obj
+        }
+        )
+
+    def post(self, request, id):
+        post = get_object_or_404(Post, id=id)
+        game_obj = post.game
+
+        post_form = PostForm(data=request.POST)
+        if post_form.is_valid():
+            # post_form.instance.name = request.user.username
+            post = post_form.save(commit=False)
+            # post.author = get_user(request)
+            # post.game = game_obj
+            post.save()
+            url = request.POST.get("url")
+            return redirect(reverse("game_page", args=(url,)))
+        else:
+            post_form = PostForm()
+
+        return render(request, 'edit_post.html',
         {
             "post_form": PostForm()
         }

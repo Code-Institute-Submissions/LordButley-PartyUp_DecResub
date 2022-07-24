@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 
-
 * {
     font-family: 'Montserrat Alternates', sans-serif;
 } 
@@ -41,6 +40,10 @@ body {
 
 .bg-custom {
     background-color: #eeeeee !important;
+}
+
+.card-width {
+    max-width:1360px
 }
 
 
@@ -96,3 +99,5 @@ footer i {
     padding: 5px;
     margin: 5px;
 }
+
+
