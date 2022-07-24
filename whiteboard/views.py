@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
+# from django.http import HttpResponseRedirect
 from django.views import generic, View
 from .models import Post, Game, Comment
 from .forms import PostForm, CommentForm
@@ -87,7 +88,9 @@ class CreatePost(View):
             post.author = get_user(request)
             post.game = Game.objects.get(ref_name=ref_name)
             post.save()
-
+            # return HttpResponseRedirect('game_page' 'ref_name')
+            url = request.POST.get("url")
+            return redirect(reverse("game_page", args=(url,)))
         else:
             post_form = PostForm()
 
