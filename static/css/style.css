@@ -14,7 +14,7 @@
 }
 
 body {
-    padding-top: 56px;
+    padding-top: 70px;
 }
 
 .image-container {
@@ -27,11 +27,6 @@ body {
     min-height: 100%;
     width: 100%
 }
-/* 
-.page-height {
-    min-height: 100vh !important;
-} */
-
 
 #index-background-image{
     background-image: url("https://res.cloudinary.com/partyupcloud/image/upload/v1658577580/cool-background_suzhkt.png");
@@ -45,31 +40,6 @@ body {
 .card-width {
     max-width:1360px
 }
-
-
-/* #hero-image{
-    background-image : url("https://res.cloudinary.com/partyupcloud/image/upload/v1658131644/crossplay_hso3d7.avif");
-    height: 60vh;    
-}
-
-#dbd-image{
-    background-image: url("https://res.cloudinary.com/partyupcloud/image/upload/v1658154932/banner-dbd_hcubfq.jpg");
-    height: 20vh;
-}
-
-#rocket-league-image{
-    background-image: url("https://res.cloudinary.com/partyupcloud/image/upload/v1658157324/rocket_league_banner_odd6n2.jpg");
-    height: 20vh;
-    background-position:bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-}  */
-
-/* .col-sm-4 img{
-    max-height: 50vh;
-    object-fit: cover;
-
-} */
 
 .game-tile {
     justify-content: center;
