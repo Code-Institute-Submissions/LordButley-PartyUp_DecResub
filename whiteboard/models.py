@@ -27,9 +27,6 @@ class Post(models.Model):
     most_recent = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    eighteen_plus = models.BooleanField(default=False)
-    boys_only = models.BooleanField(default=False)
-    girls_only = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-most_recent']

@@ -29,11 +29,16 @@
             <tr>
                 <td>
                     <a href = "{% url 'post_page' x.id %}">
-                        {{ x.title }}
+                        {{ x.title }} 
                     </a>
-                    <!-- <a href = "{% url 'edit_post' x.id %}">
-                        {{ x.title }}
-                    </a> -->
+                    {% if user.is_authenticated and user.id == x.author.id %}
+
+                    <a href = "{% url 'edit_post' x.id %}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                    {% endif %}
+
+
                 </td>
                 <td>{{ x.author }} - {{ x.created_on }}</td>
                 <td>{{ x.most_recent }}</td>

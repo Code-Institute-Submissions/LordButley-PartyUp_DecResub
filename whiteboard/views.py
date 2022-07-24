@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-# from django.http import HttpResponseRedirect
 from django.views import generic, View
 from .models import Post, Game, Comment
 from .forms import PostForm, CommentForm
@@ -99,14 +98,6 @@ class CreatePost(View):
         }
         )
 
-# class EditPost(UpdateView):
-#     '''
-#     View to update a recipe if user is logged in.
-#     '''
-#     model = Post
-#     template_name = 'edit_post.html'
-#     form_class = EditForm
-
 class EditPost(View):
 
     def get(self, request, id):
@@ -130,7 +121,7 @@ class EditPost(View):
             post = post_form.save(commit=False)
             post.author = get_user(request)
             post.game = game_obj
-            post.save()
+            post.save(self)
             url = request.POST.get("url")
             return redirect(reverse("game_page", args=(url,)))
         else:

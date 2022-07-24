@@ -5,6 +5,10 @@
     font-family: 'Montserrat Alternates', sans-serif;
 } 
 
+a {
+    text-decoration: none !important;
+}
+
 .font-pm {
     font-family: 'Permanent Marker', sans-serif;
 }
