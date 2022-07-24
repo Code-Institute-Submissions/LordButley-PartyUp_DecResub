@@ -5,7 +5,11 @@
 
 <div class="container-xl">
 
-    <div class="card text-white bg-dark mb-3" >
+  <div class="container-xl"  id="banner-image">
+    <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
+  </div>
+  
+    <div class="card text-black bg-light mb-3" >
         <div class="card-header"><h1>{{post.title}}</h1></div>
         <div class="card-body">
           <!-- <h5 class="card-title">Dark card title</h5> -->
@@ -23,7 +27,7 @@
         <td>{{ comment.created_on }}</td>
     </tr> -->
     
-    <div class="card text-white bg-dark mb-3" >
+    <div class="card text-black bg-light mb-3" >
         <div class="card-header">By {{comment.name}} on {{comment.created_on}}</div>
         <div class="card-body">
           <!-- <h5 class="card-title">Dark card title</h5> -->

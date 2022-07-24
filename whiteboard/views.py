@@ -28,11 +28,14 @@ class GameComment(View):
 
     def get(self, request, id):
         post = get_object_or_404(Post, id=id)
+        game_obj = Game.objects.get(post=post)
+
         comments = Comment.objects.filter(post=post)
 
         return render(request, 'post_page.html',
             {
               "post": post,
+              "game": game_obj,
               "comments": comments,
               "comment_form": CommentForm()
             }
