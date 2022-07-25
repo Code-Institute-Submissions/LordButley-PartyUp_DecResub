@@ -5,7 +5,7 @@
 
 <div class="container-xl text-light">
 
-  <div class="container-xl" id="banner-image">
+  <div class="container-xl mb-2" id="banner-image">
     <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
   </div>
   {% if user.is_authenticated %}
@@ -18,7 +18,6 @@
       <h1>{{post.title}}</h1>
     </div>
     <div class="card-body">
-      <!-- <h5 class="card-title">Dark card title</h5> -->
       <p class="card-text">{{post.content}}</p>
     </div>
   </div>
@@ -27,23 +26,18 @@
 
 
   {% for comment in comments %}
-  <!-- <tr>
-        <td>{{ comment.content }}</td>
-        <td>{{ comment.author }} </td>
-        <td>{{ comment.created_on }}</td>
-    </tr> -->
+ 
 
   <div class="card text-black bg-light mb-2">
     <div class="card-header">By {{comment.name}} on {{comment.created_on}}</div>
     <div class="card-body">
-      <!-- <h5 class="card-title">Dark card title</h5> -->
       <p class="card-text">{{comment.content}}</p>
     </div>
   </div>
 
 
   {% endfor %}
-  <!-- </table> -->
+
   {% if user.is_authenticated %}
   <div class="container col-sm-6">
     <div class="row justify-content-center">
