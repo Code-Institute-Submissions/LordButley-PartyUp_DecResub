@@ -15,7 +15,7 @@ Party Up is a full-stack software development project that has been built using 
 
 You can visit the live website [here](https://partyupgaming.herokuapp.com/)
 
-![Landing terminal screen](assets/images/homepage.JPG)
+![Landing terminal screen](media/readme/amiresponsive.JPG)
 
 # Contents
 
@@ -64,21 +64,12 @@ The target audience of this website is any person who :
 * As a registered user I can create posts so that I can find other gamers who want to achieve the same things
 * As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
+An agile approach was used for creating this website. The project board can be found here: [Kanbad](https://github.com/users/LordButley/projects/1/views/1)
+
 ## Structure
-
-<!-- The program is designed to be quick and easy to play:
-
-- Welcome page - This contains a ASCII art title and the menu options.
-- How to play page - This provides details on how to play the game
-- Leaderboard page - This provides the a leaderboard of the top 5 highscores
-- Options pages - The user is given the choice of difficulty and question theme
-- Game page - The user is shown a word to type. The score and lives are shown after each question -->
 
 
 ## Skeleton
-
-<!-- The initial ideas were taken from the structure planning and a process tree was created using app.diagram.net 
-![Program process tree](assets/images/processtree.jpg).  -->
 
 # Features
 
@@ -86,77 +77,11 @@ The target audience of this website is any person who :
 
 ### Home page and menu
 
-<!-- - Contains ASCII art title of the game
-- Gives the user 4 options; 
-    1. To start a new game
-    2. View leaderboard
-    3. How to play
-    4. Exit game
-- If you do not enter one of the corresponding numbers, you will be told what you have entered and asked to enter the number of one of the options provided
-
-![Screen shot of the homepage of Typekwondo](assets/images/homepage.JPG) -->
-
-### Leaderboard
-
-<!-- - Prettytable library has been imported and used for the structure of the table.
-- The leaderboard consists of three columns; User, Score and Difficulty.
-- The data from the leaderboard is pulled from the googlesheets database.
-- You are also provided with the menu options.
-
-![Screen shot of the leaderboard of Typekondo](assets/images/leaderboard.JPG) -->
-
-### How to play
-
-<!-- - How to play explains the different elements of the game as well as the scoring structure
-- The menu options are also provided for continuation
-
-![Screen shot of the how to play section](assets/images/howto.JPG) -->
-
-
-### Enter name
-
-<!-- - You are asked to enter your name
-- You are then asked if this is correct
-- If you do not answer yes or no to whether it is correct, you are redirected to answer the question again. You are told what you have entered.
-- Once you select your name, the console prints out Hi and your name -->
-
-### Difficulty and quiz theme choices
-<!-- 
- - The quiz provides 5 different quiz types: Star Wars, Harry Potter and Periodic table of elements, popular cheeses and populous countries.
- - You are asked to choose which you would like to play.
- - The difficulty setting is next requested. You can choose easy, normal or hard. Easy applies a 1* score multiplier, normal is 1.5* and hard is 2*. Additionally if you play on normal you have 3 lives, normal you have 2 and hard you have 1.
-  - Incorrect input is captured and directed back to the user
-
-![Screen shot of the quiz choices](assets/images/themechoice.JPG) 
-![Screen shot of the difficulty choices](assets/images/difficultychoice.JPG) -->
-
-### Quiz
-
-<!-- - The number of correctly answered questions and lives are shown at the top of the quiz.
-- The word to type is shown underneath
-- The terminal is cleared after each question
-- After the quiz ends, you are shown your score
-- A menu is provided at the end of the quiz for continuation
-
-![Screen shot of the quiz](assets/images/quizpage.JPG) -->
+### How to use
 
 ### Data and Database
 
-<!-- Data is sent from the app to the database (spreadsheets). The following table was created to show the data structure through the app
-
-| Title      | Key in Database | Data Type    |
-|------------|-----------------|--------------|
-| Name       | name            | CharField    |
-| Score      | score           | DecimalField |
-| Difficulty | difficulty      | CharField    |
-
-There are two sheets associated with the app. The first acts as a dump for all the data from the games that have been played. The second is generated from the first and is ordered numerically allowing the top 5 to be taken. This is achieved using "=sort(Sheet1!A:C, 2, FALSE)" on the second spreadsheet. -->
-
 ## Features to implement in the future
-
-<!-- - Add additional question sets
-- Add a superhard difficulty setting that is case sensitive
-- Add a variant where the word you have to spell is hidden after a second. -->
 
 ## Technologies Used
 
@@ -164,6 +89,15 @@ There are two sheets associated with the app. The first acts as a dump for all t
 
  1. [Python](https://en.wikipedia.org/wiki/Python) 
       - Programming language providing content and logic of project
+
+ 2. [HTML](https://en.wikipedia.org/wiki/HTML) 
+ - Programming language providing content and structure of website.
+
+ 3. [CSS](https://en.wikipedia.org/wiki/CSS) 
+ - Programming language providing styling of website.
+
+ 4. [JavaScript](https://en.wikipedia.org/wiki/Javascript)
+ - Programming language used for the functions and interactivity behind the quiz.
  
  ### Frameworks, Libraries & Programs Used:
 
@@ -180,10 +114,7 @@ There are two sheets associated with the app. The first acts as a dump for all t
  4. [app.diagram.net](app.diagram.net)
     - Used to create process diagram. 
 
- 5. [Ascii Art Generator](https://patorjk.com/software/taag/#p=testall&h=2&f=Graffiti&t=Typekwondo)
-    - Used to create the title on the homepage
-
- 6. Python Libraries:
+ 5. Python Libraries:
     - os - Used to clear the terminal
     - time - Used for creating a timer
     - random - Used to randomise questions
@@ -191,7 +122,7 @@ There are two sheets associated with the app. The first acts as a dump for all t
     - string - Used for capitalizing input to match that of the database
     - gspread and google.oauth2.service_account for linking google sheets
 
- 7.[http://pep8online.com/](http://pep8online.com/)
+ 6.[http://pep8online.com/](http://pep8online.com/)
     - PEP8 Validator used to check code for compliance
 
 ## Testing
@@ -213,27 +144,24 @@ To host on Heroku you must follow these steps:
 
 #### Creating a Heroku App
 
-1. Go to [Heroku](https://www.heroku.com/)
-2. Login to my account.
-3. On the Heroku dashboard click on 'New'
-4. Click on 'Create new app"
-5. Input the app name 
-6. Select region
-6. Click "Create app"
-7. Reload the page. Scroll back to 'GitHub Pages' section, where the new URL for the deployed site can be found.
+Heroku was used to deploy the site and it was achieved by following the steps below:
 
-#### Input settings
+Heroku was used to deploy the site and it was achieved by following the steps below:
+  1.	Go to the Heroku's website.
+  2.	Create an account if required or select log in.
+  3.	From the Heroku dashboard, click on the “New” button in top righthand corner then "Create new app".
+  4.	Enter a unique "App name" and "Choose a region" before clicking on "Create app".
+  5.	Go to "Config Vars" under the "Settings" tab.
+  6.	Click on "Reveals Config Vars" and enter the following information:
+	      - CLOUDINARY_URL : add your cloudinary key here.
+        - DATABASE_URL : add the url from postgres database.
+        - SECRET_KEY = a secret key for your app.
+        - PORT : 8000
+        - DISABLE_COLLECTSTATIC = 1 during development (Remove when deploying production!)
+  7.	Go to "Buildpacks" section and click "Add buildpack".
+  8.	Select "/herokupython" and click "Save changes"
 
-1. Click on "Reveal Config Vars"
-2. In the field for key, enter "CREDS"
-3. Copy contents of creds.json into the corresponding value field.
-4. In the next field for key, enter "PORT"
-5. In the corresponding value field enter "8000"
-6. Click "Add buildpack"
-7. Click "Python" and then "save changes"
-8. Click "Add buildpack"
-9. Click "nodejs" and then "save changes". 
-10. Ensure these build packs are listed in the order above.
+- Project Version Control – Git was used to control the versions of the project during development. Changes were added, committed, and saved using commands such as ‘git add .’ and ‘git commit’, and ‘git push’. Once changes had been committed, they were pushed and stored on the GitHub repository with the rest of the projects source code.
 
 #### Deploy section
 
@@ -250,9 +178,6 @@ To host on Heroku you must follow these steps:
 ## Credits
 
 ### Code
-
-- Code lines 20 - 31 in run.py regarding connecting googlesheets APIs adapted from Code Institute LMS 
-- Clear screen function code adapted from stackoverflow [here](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
 
 ### Thanks
 
