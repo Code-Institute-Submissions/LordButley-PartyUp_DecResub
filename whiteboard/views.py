@@ -117,10 +117,7 @@ class EditPost(View):
 
         post_form = PostForm(data=request.POST, instance=post)
         if post_form.is_valid():
-            # post_form.instance.name = request.user.username
             post = post_form.save(commit=False)
-            # post.author = get_user(request)
-            # post.game = game_obj
             post.save()
             url = request.POST.get("url")
             return redirect(reverse("game_page", args=(url,)))

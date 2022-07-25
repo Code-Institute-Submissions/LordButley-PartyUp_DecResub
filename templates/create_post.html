@@ -4,8 +4,7 @@
 <div class="container-xl"  id="banner-image">
   <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
 </div>
-<!-- <div class="container-xl"  id="{{game.ref_name}}-image">
-    <img class="image-fluid" alt="{{game.title}}" src={{game.banner.url}}> -->
+
     <div class="container-xl text-light">
 <form method="POST" action="{% url 'create_post' game.ref_name %}" >
     {{ post_form | crispy }}
