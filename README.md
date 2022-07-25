@@ -1,108 +1,261 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Party Up!
 
-Welcome LordButley,
+Welcome to Party Up! 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Any gamer will tell you about the dangers of "solo queuing" and how quickly it can erode the ranks that you've diligently earned. We here at Party up want to remind you of something we all forgot a long time ago, before the COVID, before the internet, before God of War: Video games are better with your friends!
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Enter Party Up! The one stop shop for :
 
-## Gitpod Reminders
+* Meeting likeminded gamers and making friends
+* Putting together crack squads to push the limits of your skill level and boost your ranking
+* Trophy Hunting or Achievement Unlocking. Here you can team up and smash out those multiplayer goals with ease.
+* Fun - so you don't want a new BFF, nor care about high-level gaming. That's alright. Here you can find other people who also just want to mess around
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Party Up is a full-stack software development project that has been built using Django and Bootstrap frameworks, with additional HTML, CSS and JavaScript. 
 
-`python3 -m http.server`
+You can visit the live website [here](https://partyupgaming.herokuapp.com/)
 
-A blue button should appear to click: _Make Public_,
+![Landing terminal screen](assets/images/homepage.JPG)
 
-Another blue button should appear to click: _Open Browser_.
+# Contents
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# UX
 
-A blue button should appear to click: _Make Public_,
+The project has been completed using the core UX principles to ensure an efficient and easy to use app was created that had a distinct purpose and provided satisfaction to users
 
-Another blue button should appear to click: _Open Browser_.
+## Strategy 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Goals -
+Mobile first design
+Agile work
 
-To log into the Heroku toolbelt CLI:
+## Target Audience
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The target audience of this website is any person who :
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* enjoys online video games
+* wants to meet other gamers and make friends
+* is looking for a team mate for ranked play
+* is looking for a team mate for trophy/achievement hunting
 
-------
 
-## Release History
+## User Stories
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* As an unregistered user I can view each post on the website so that I can select one to read and decide whether to sign up
+* As a user I can navigate intuitively so that I can view the desired content
+* As a logged in user I can change the details on my profile page so that all my details and information are up to date
+* As a logged in user I can view my profile page so that I can see my personal account details
+* As an admin I can create, remove, update or delete posts so that I can ensure site content is relevant and inoffensive
+* As an Admin I can log out of the admin panel so that I can disconnect from the website
+* As an admin I can log in so that I can access the sites backend
+* As a user I can access social media accounts connected to the website so that I may learn more about the company
+* As a user I can quickly identify the purpose of the website from the landing page so that determine if the website is relevant to me
+* As a registered user I can login and logout of my account so that I can access and keep secure my data
+* As a registered user I can set a password so that so that my account is secure
+* As a registered user I can request a new password in case I forget my own so that I can regain access to my account
+* As a user I can contact the website so that I can provide feedback or present queries
+* As an unregistered user I can create an account so that I can interact fully with the website
+* As an unregistered user I can easily find the sign up page so that I can register and interact with the website
+* As a user I can fill in my personal details on my account page so that I can auto populate forms with my information on the site
+* As a registered user I can delete my account so that ensure my details are removed after I no longer want to use it
+* As a registered user I can comment on posts so that I can connect with other gamers
+* As a registered user I can delete my posts so that my post are no longer visible and I will receive no further messages
+* As a registered user I can update my posts so that I can keep my posts relevant and up to date with information
+* As a registered user I can create posts so that I can find other gamers who want to achieve the same things
+* As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Structure
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<!-- The program is designed to be quick and easy to play:
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Welcome page - This contains a ASCII art title and the menu options.
+- How to play page - This provides details on how to play the game
+- Leaderboard page - This provides the a leaderboard of the top 5 highscores
+- Options pages - The user is given the choice of difficulty and question theme
+- Game page - The user is shown a word to type. The score and lives are shown after each question -->
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Skeleton
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<!-- The initial ideas were taken from the structure planning and a process tree was created using app.diagram.net 
+![Program process tree](assets/images/processtree.jpg).  -->
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+# Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Existing Features
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Home page and menu
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<!-- - Contains ASCII art title of the game
+- Gives the user 4 options; 
+    1. To start a new game
+    2. View leaderboard
+    3. How to play
+    4. Exit game
+- If you do not enter one of the corresponding numbers, you will be told what you have entered and asked to enter the number of one of the options provided
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Screen shot of the homepage of Typekwondo](assets/images/homepage.JPG) -->
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Leaderboard
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<!-- - Prettytable library has been imported and used for the structure of the table.
+- The leaderboard consists of three columns; User, Score and Difficulty.
+- The data from the leaderboard is pulled from the googlesheets database.
+- You are also provided with the menu options.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Screen shot of the leaderboard of Typekondo](assets/images/leaderboard.JPG) -->
 
-------
+### How to play
 
-## FAQ about the uptime script
+<!-- - How to play explains the different elements of the game as well as the scoring structure
+- The menu options are also provided for continuation
 
-**Why have you added this script?**
+![Screen shot of the how to play section](assets/images/howto.JPG) -->
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Enter name
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<!-- - You are asked to enter your name
+- You are then asked if this is correct
+- If you do not answer yes or no to whether it is correct, you are redirected to answer the question again. You are told what you have entered.
+- Once you select your name, the console prints out Hi and your name -->
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+### Difficulty and quiz theme choices
+<!-- 
+ - The quiz provides 5 different quiz types: Star Wars, Harry Potter and Periodic table of elements, popular cheeses and populous countries.
+ - You are asked to choose which you would like to play.
+ - The difficulty setting is next requested. You can choose easy, normal or hard. Easy applies a 1* score multiplier, normal is 1.5* and hard is 2*. Additionally if you play on normal you have 3 lives, normal you have 2 and hard you have 1.
+  - Incorrect input is captured and directed back to the user
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Screen shot of the quiz choices](assets/images/themechoice.JPG) 
+![Screen shot of the difficulty choices](assets/images/difficultychoice.JPG) -->
 
-**So….?**
+### Quiz
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<!-- - The number of correctly answered questions and lives are shown at the top of the quiz.
+- The word to type is shown underneath
+- The terminal is cleared after each question
+- After the quiz ends, you are shown your score
+- A menu is provided at the end of the quiz for continuation
 
-**Can I opt out?**
+![Screen shot of the quiz](assets/images/quizpage.JPG) -->
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Data and Database
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+<!-- Data is sent from the app to the database (spreadsheets). The following table was created to show the data structure through the app
 
-**Anything more?**
+| Title      | Key in Database | Data Type    |
+|------------|-----------------|--------------|
+| Name       | name            | CharField    |
+| Score      | score           | DecimalField |
+| Difficulty | difficulty      | CharField    |
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+There are two sheets associated with the app. The first acts as a dump for all the data from the games that have been played. The second is generated from the first and is ordered numerically allowing the top 5 to be taken. This is achieved using "=sort(Sheet1!A:C, 2, FALSE)" on the second spreadsheet. -->
 
----
+## Features to implement in the future
 
-Happy coding!
+<!-- - Add additional question sets
+- Add a superhard difficulty setting that is case sensitive
+- Add a variant where the word you have to spell is hidden after a second. -->
+
+## Technologies Used
+
+ ### Languages Used:
+
+ 1. [Python](https://en.wikipedia.org/wiki/Python) 
+      - Programming language providing content and logic of project
+ 
+ ### Frameworks, Libraries & Programs Used:
+
+    
+ 1. [GitPod](https://gitpod.io/)
+    - IDE (Integrated Development Environment), for writing, editing and saving code.
+
+ 2. [GitHub](https://github.com/) 
+    - Remote code repository.
+
+ 3. [Heroku](https://www.heroku.com/)
+    - Cloud application platform used to host program
+
+ 4. [app.diagram.net](app.diagram.net)
+    - Used to create process diagram. 
+
+ 5. [Ascii Art Generator](https://patorjk.com/software/taag/#p=testall&h=2&f=Graffiti&t=Typekwondo)
+    - Used to create the title on the homepage
+
+ 6. Python Libraries:
+    - os - Used to clear the terminal
+    - time - Used for creating a timer
+    - random - Used to randomise questions
+    - prettytable - Used for the leaderboard
+    - string - Used for capitalizing input to match that of the database
+    - gspread and google.oauth2.service_account for linking google sheets
+
+ 7.[http://pep8online.com/](http://pep8online.com/)
+    - PEP8 Validator used to check code for compliance
+
+## Testing
+
+The testing process can be seen in the [TESTING.md](TESTING.md) document.
+
+## Deployment
+
+### Heroku
+The site is hosted using Heroku, deployed directly from the master branch of GitHub. The deployed site will update automatically as new commits are pushed to the master branch.
+
+#### How I deployed my project to Heroku.
+To host on Heroku you must follow these steps:
+
+#### Updating dependencies for Heroku deployment
+
+1. Create a requirements.txt file in the home directory of project
+2. In the terminal write : pip3 freeze > requirements.txt
+
+#### Creating a Heroku App
+
+1. Go to [Heroku](https://www.heroku.com/)
+2. Login to my account.
+3. On the Heroku dashboard click on 'New'
+4. Click on 'Create new app"
+5. Input the app name 
+6. Select region
+6. Click "Create app"
+7. Reload the page. Scroll back to 'GitHub Pages' section, where the new URL for the deployed site can be found.
+
+#### Input settings
+
+1. Click on "Reveal Config Vars"
+2. In the field for key, enter "CREDS"
+3. Copy contents of creds.json into the corresponding value field.
+4. In the next field for key, enter "PORT"
+5. In the corresponding value field enter "8000"
+6. Click "Add buildpack"
+7. Click "Python" and then "save changes"
+8. Click "Add buildpack"
+9. Click "nodejs" and then "save changes". 
+10. Ensure these build packs are listed in the order above.
+
+#### Deploy section
+
+1. Click on Github under deployment method
+2. Search for repository and then click on "connect"
+3. Click on "Enable Automatic Deploys"
+
+#### Forking a GitHub Repository
+1. Login to GitHub.
+2. Locate your desired repository.
+3. Locate the fork option in the top-right hand corner of the repository page.    
+4. You will be asked where you want to fork it to.
+
+## Credits
+
+### Code
+
+- Code lines 20 - 31 in run.py regarding connecting googlesheets APIs adapted from Code Institute LMS 
+- Clear screen function code adapted from stackoverflow [here](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+
+### Thanks
+
+- to tutor support at Code Institute. I have constantly found their positivity and genuine interest in helping resolve issues in my code a great help 
+- to my mentor, Richard Wells, who reviewed my project and gave feedback.
+- to my partner who is always willing to test everything I create 
