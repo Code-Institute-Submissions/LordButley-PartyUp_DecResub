@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-
 <div class="container-xl"  id="banner-image">
     <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
 </div>
+<hr class="line-break">    
+    <h1 class="text-center text-white fw-bolder">
+        {{game.title}}
+    </h1>
+<hr class = "line-break">
+
 <div class="container-xl">
     {% if user.is_authenticated %}
     <button class = "btn btn-light btn-lg btn-block mt-2 mb-2">
@@ -16,7 +21,6 @@
     <h2 class="font-pm text-center text-bone my-2">Sign up or login in to post</h2>
    
     {% endif %}
-
     <table class="table table-secondary table-striped">
         <thead>
             <th scope="col">Title</th>
@@ -53,6 +57,5 @@
         </tbody>
     </table>
 </div>
-
 
 {%endblock%}
