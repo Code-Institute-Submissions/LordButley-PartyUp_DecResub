@@ -33,9 +33,14 @@
             </ul>
             <div>
             {% if user.is_authenticated %}
-        
+            <!-- <p> -->
+                <!-- <span> -->
+                    <p class="d-inline text-white me-1">
+                Welcome: {{user.username}}
+                </p>
+                <!-- </span> -->
             <a class="btn btn-outline-light bg-custom text-dark fw-bold bt-sm" href="{% url 'account_logout' %}"><span class="highlighter">Logout</span></a>
-    
+            <!-- </p> -->
             {% else %}
             <a class="btn bg-custom m-1 text-dark fw-bold bt-sm" href="{% url 'account_signup' %}"><span class="highlighter">Register</span></a>
 

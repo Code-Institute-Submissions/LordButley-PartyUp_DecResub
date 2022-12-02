@@ -6,7 +6,8 @@
 
 {% block content %}
 <div class="container-xl text-white">
-
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-white border border-light rounded-3 m-3 p-3">
 <h1>{% trans "Sign Up" %}</h1>
 
 <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
@@ -19,5 +20,7 @@
   {% endif %}
   <button type="submit">{% trans "Sign Up" %} &raquo;</button>
 </form>
+</div>
+  </div>
 </div>
 {% endblock %}
