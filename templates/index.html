@@ -60,11 +60,7 @@
             <a href="{% url 'game_page' game.ref_name %}">
                 <img alt="{{game.title}}" src={{game.image.url}}>
             </a>
-        </div>              
-    {% if forloop.counter|divisibleby:3 %}
-    </div>
-    <div class="row">     
-    {% endif %}                       
+        </div>                                   
     {% endfor %}
 
 
