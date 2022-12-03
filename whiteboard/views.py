@@ -1,5 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.http import HttpResponseNotFound
 from django.views import generic, View
 from django.contrib import messages
 from django.contrib.auth import get_user
@@ -107,14 +106,16 @@ class EditPost(View):
 
     def get(self, request, id):
         post = get_object_or_404(Post, id=id)
-        game_obj = post.game
-        return render(request, 'edit_post.html',
-        {
-            "post_form": PostForm(instance=post),
-            "post": post,
-            "game": game_obj
-        }
-        )
+        if post.author.id == request.user.id:
+            game_obj = post.game
+            return render(request, 'edit_post.html',
+            {
+                "post_form": PostForm(instance=post),
+                "post": post,
+                "game": game_obj
+            }
+            )
+        return render(request, "403.html")
 
     def post(self, request, id):
         post = get_object_or_404(Post, id=id)
@@ -138,11 +139,13 @@ class EditPost(View):
 
 def delete_post(request, id):
     post = get_object_or_404(Post, id=id)
-    game_obj = post.game
-    url = game_obj.ref_name
-    post.delete()
-    messages.success(request, "Post deleted! Feel free to post a new one")
-    return redirect(reverse("game_page", args=(url,)))
+    if post.author.id == request.user.id:
+        game_obj = post.game
+        url = game_obj.ref_name
+        post.delete()
+        messages.success(request, "Post deleted! Feel free to post a new one")
+        return redirect(reverse("game_page", args=(url,)))
+    return render(request, '403.html')
 
 def delete_comment(request, id):
     comment = get_object_or_404(Comment, id=id)
@@ -154,4 +157,4 @@ def delete_comment(request, id):
         messages.success(request, "Comment deleted! Feel free to post a new one")
         return redirect(reverse("post_page", args=(url,)))
 
-    return render(request, '405.html')
+    return render(request, '403.html')
