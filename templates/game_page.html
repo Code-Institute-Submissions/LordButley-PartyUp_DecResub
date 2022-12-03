@@ -1,46 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container-xl"  id="banner-image">
+<div class="container-xl" id="banner-image">
     <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
 </div>
-<hr class="line-break">    
-    <h1 class="text-center text-white fw-bolder">
-        {{game.title}}
-    </h1>
-<hr class = "line-break">
+<hr class="line-break">
+<h1 class="text-center text-white fw-bolder">
+    {{game.title}}
+</h1>
+<hr class="line-break">
 
 <div class="container-xl">
     {% if user.is_authenticated %}
-    <button class = "btn btn-light btn-lg btn-block mt-2 mb-2">
-        <a class = "link-dark" href="{% url 'create_post' game.ref_name %}">
+    <button class="btn btn-light btn-lg btn-block mt-2 mb-2">
+        <a class="link-dark highlighter" href="{% url 'create_post' game.ref_name %}">
             Create New Post
         </a>
     </button>
     {% else %}
     <h2 class="font-pm text-center text-bone my-2">Sign up or login in to post</h2>
-   
+
     {% endif %}
     <table class="table table-secondary table-striped">
         <thead>
-            <th scope="col">Title</th>
-            <th scope="col">Created By</th>
-            <th scope="col">Latest update</th>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Created By</th>
+                <th scope="col">Latest update</th>
+            </tr>
         </thead>
         <tbody>
-            
+
             {% for x in post %}
             <tr>
                 <td>
-                    <a href = "{% url 'post_page' x.id %}">
-                        {{ x.title }} 
+                    <a class="highlighter" href="{% url 'post_page' x.id %}">
+                        {{ x.title }}
                     </a>
                     {% if user.is_authenticated and user.id == x.author.id %}
 
-                    <a href = "{% url 'edit_post' x.id %}">
+                    <a class="highlighter" href="{% url 'edit_post' x.id %}">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
-                    <a href = "{% url 'delete_post' x.id %}">
+                    <a class="highlighter" href="{% url 'delete_post' x.id %}">
                         <i class="fa-solid fa-trash-can"></i>
                     </a>
                     {% endif %}
@@ -50,10 +52,10 @@
                 <td>{{ x.author }} - {{ x.created_on }}</td>
                 <td>{{ x.most_recent }}</td>
             </tr>
-            
+
             {% endfor %}
-            
-        
+
+
         </tbody>
     </table>
 </div>

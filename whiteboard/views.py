@@ -46,6 +46,7 @@ class GameComment(View):
 
     def post(self, request, id):
         post = get_object_or_404(Post, id=id)
+        game_obj = Game.objects.get(post=post)
         comments = Comment.objects.filter(post=post)
 
         comment_form = CommentForm(data=request.POST)
@@ -61,6 +62,7 @@ class GameComment(View):
         return render(request, 'post_page.html',
             {
               "post": post,
+              "game": game_obj,
               "comments": comments,
               "comment_form": CommentForm()
             }

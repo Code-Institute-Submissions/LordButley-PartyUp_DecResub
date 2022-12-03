@@ -6,25 +6,27 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-<div class="container-xl min-vh-85">
-  <div class="row justify-content-center">
-<div class="col-md-4 text-white border border-light rounded-3 m-3 p-3">
-<h1>{% trans "Sign In" %}</h1>
 
-<p>{% blocktrans %}If you have not created an account yet, then please
-<a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+<div id="index-background-image" class="container-fluid text-white d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+  <div class="row">
+      <div class="col-12 bg-dark">
+        <h1>{% trans "Sign In" %}</h1>
 
+        <p>{% blocktrans %}If you have not created an account yet, then please
+        <a class="highlighter" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+        
+        
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="primaryAction btn bg-custom m-1 text-dark fw-bold bt-sm highlighter" type="submit">{% trans "Sign In" %}</button>
+        </form>
+      </div>
+  </div>
+</div>
 
-<form class="login" method="POST" action="{% url 'account_login' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
-</form>
-</div>
-</div>
-</div>
 
 {% endblock %}

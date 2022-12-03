@@ -1,20 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 {% load crispy_forms_tags %}
-<div class="container-xl"  id="banner-image">
+<div class="container-xl" id="banner-image">
   <img class="img-fluid" alt="{{game.title}} banner image" src={{game.banner.url}}>
 </div>
+<hr class="line-break">
+<h1 class="text-center text-white fw-bolder">
+  Create new post!
+</h1>
+<hr class="line-break">
 
-    <div class="container-xl text-light">
-<form method="POST" action="{% url 'create_post' game.ref_name %}" >
-    {{ post_form | crispy }}
-    {% csrf_token %}
-    <input type="hidden" value="{{ game.ref_name }}" name="url" />
-    <button type="submit" class="btn btn-signup btn-lg btn-light">
-      Submit
-    </button>
+<div class="row text-light justify-content-center">
+  <div class="col-12 col-md-6">
+    <form method="POST" action="{% url 'create_post' game.ref_name %}">
+      {{ post_form | crispy }}
+      {% csrf_token %}
+      <input type="hidden" value="{{ game.ref_name }}" name="url">
+      <button type="submit" class="highlighter mt-2 btn btn-signup btn-lg btn-light">
+        Submit
+      </button>
 
-  </form>
+    </form>
+  </div>
 </div>
 
 {% endblock %}

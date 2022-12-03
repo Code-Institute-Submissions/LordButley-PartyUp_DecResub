@@ -4,25 +4,26 @@
 
 
 
-<div class ="pb-2" id="index-background-image">
+<div class="pb-2" id="index-background-image">
     <div class="container-md headings">
 
         <div class="row py-3">
             <div class="col text-dark text-center">
-            <h1  class="font-pm">Looking for players?</h1>
-            <h2 class="font-pm">Find a gaming buddy here!</h2>
+                <h1 class="font-pm">Looking for players?</h1>
+                <h2 class="font-pm">Find a gaming buddy here!</h2>
             </div>
         </div>
-        
-            
-              
+
+
+
         <div class="row justify-content-center mb-4 mx-1">
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body text-center mx-2">
                         <h5 class="card-title"><i class="fa-solid fa-gamepad"></i></h5>
                         <h6 class="card-subtitle mb-2 ">Choose a game</h6>
-                        <p class="card-text">Click on a game to see posts from other players. Sign up to create your own</p>
+                        <p class="card-text">Click on a game to see posts from other players. Sign up to create your own
+                        </p>
 
                     </div>
                 </div>
@@ -55,15 +56,15 @@
 
 <div class="container-fluid container-xl mb-3">
     <div class="row">
-    {% for game in game_list %}
+        {% for game in game_list %}
         <div class="col-sm-6 col-md-4 game-tile pulse">
             <a href="{% url 'game_page' game.ref_name %}">
                 <img alt="{{game.title}}" src={{game.image.url}}>
             </a>
-        </div>                                   
-    {% endfor %}
+        </div>
+        {% endfor %}
 
 
-
+    </div>
+</div>
 {%endblock%}
-
