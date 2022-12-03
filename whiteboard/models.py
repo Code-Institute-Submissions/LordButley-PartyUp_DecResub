@@ -35,6 +35,8 @@ class Post(models.Model):
         return self.title
 
 class Comment(models.Model):
+    
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="whiteboard_comments")
     name = models.CharField(max_length=80)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)

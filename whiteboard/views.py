@@ -1,8 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.http import Http404
 from django.views import generic, View
+from django.contrib import messages
+from django.contrib.auth import get_user
 from .models import Post, Game, Comment
 from .forms import PostForm, CommentForm
-from django.contrib.auth import get_user
+
 
 # Create your views here.
 
@@ -50,6 +53,7 @@ class GameComment(View):
         if comment_form.is_valid():
             comment_form.instance.name = request.user.username
             comment = comment_form.save(commit=False)
+            comment.author = get_user(request)
             comment.post = post
             comment.save()
         else:
@@ -88,6 +92,7 @@ class CreatePost(View):
             post.save()
             # return HttpResponseRedirect('game_page' 'ref_name')
             url = request.POST.get("url")
+            messages.success(request, "Post created! You're one step closer to Partying Up!")
             return redirect(reverse("game_page", args=(url,)))
         else:
             post_form = PostForm()
@@ -120,6 +125,7 @@ class EditPost(View):
             post = post_form.save(commit=False)
             post.save()
             url = request.POST.get("url")
+            messages.success(request, "Post updated :)")
             return redirect(reverse("game_page", args=(url,)))
         else:
             post_form = PostForm()
@@ -135,6 +141,17 @@ def delete_post(request, id):
     game_obj = post.game
     url = game_obj.ref_name
     post.delete()
+    messages.success(request, "Post deleted! Feel free to post a new one")
     return redirect(reverse("game_page", args=(url,)))
 
+def delete_comment(request, id):
+    comment = get_object_or_404(Comment, id=id)
+    if comment.author.id == request.user.id:
+        comment.delete()
+        # return redirect(reverse("post_page"), args=(comment.post.id))
+        url = comment.post.id
+        print(url)
+        messages.success(request, "Comment deleted! Feel free to post a new one")
+        return redirect(reverse("post_page", args=(url,)))
 
+    return Http404
