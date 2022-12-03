@@ -31,9 +31,8 @@
       <h3>
         By {{comment.name}} on {{comment.created_on}}
       </h3>
-      {{comment.post.author.id}}
       {% if user.is_authenticated and user.id == comment.author.id %}
-      <a href = "{% url 'delete_comment' comment.id %}">
+      <a class="highlighter" href = "{% url 'delete_comment' comment.id %}">
         <i class="fa-solid fa-trash-can"></i>
       </a>
       {% endif %}

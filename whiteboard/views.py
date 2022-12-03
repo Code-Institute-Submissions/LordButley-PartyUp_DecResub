@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
-from django.http import Http404
+from django.http import HttpResponseNotFound
 from django.views import generic, View
 from django.contrib import messages
 from django.contrib.auth import get_user
@@ -154,4 +154,4 @@ def delete_comment(request, id):
         messages.success(request, "Comment deleted! Feel free to post a new one")
         return redirect(reverse("post_page", args=(url,)))
 
-    return Http404
+    return render(request, '405.html')
