@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
 
+/* General styles  */
 * {
     font-family: 'Montserrat Alternates', sans-serif;
 } 
 
+.line-break {
+    color:#eeeeee;
+}
+
+/* Font styles */
 a {
     text-decoration: none !important;
 }
@@ -17,10 +23,12 @@ a {
     color:#eeeeee;
 }
 
+/* Nav bar related styles */
 body {
     padding-top: 70px;
 }
 
+/* image styles */
 .image-container {
     width: 100%;
     background-position:center;
@@ -41,6 +49,7 @@ body {
     background-color: #eeeeee !important;
 }
 
+/* game tile styles */
 .card-width {
     max-width:1360px
 }
@@ -64,7 +73,7 @@ body {
     overflow:hidden;
     border-radius: 10px;
 }
-
+/* footer styles */
 footer i {
     color:#eeeeee;
     font-size: x-large;
@@ -72,18 +81,13 @@ footer i {
     margin: 5px;
 }
 
+/* User feedback */
 .highlighter i:hover,
 .highlighter:hover{
     color:crimson !important;
 }
 
-.line-break {
-    color:#eeeeee;
-}
 
-.container-custom{
-    max-width: 720px;
-}
 
 
 

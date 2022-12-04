@@ -10,13 +10,19 @@ from .forms import PostForm, CommentForm
 
 
 class GameList(generic.ListView):
+    """ View to return the home page"""
+
     model = Game
     template_name = 'index.html'
 
 
 class GamePostList(View):
+    """ View to return the a game's respective posts"""
 
     def get(self, request, ref_name):
+        """ A getter method for GamePostList.
+         Retreives the games and the posts."""
+
         game_obj = Game.objects.get(ref_name=ref_name)
 
         post = Post.objects.filter(game=game_obj)
@@ -30,6 +36,7 @@ class GamePostList(View):
 
 
 class GameComment(View):
+    """ View to return the a post's respective comments"""
 
     def get(self, request, id):
         post = get_object_or_404(Post, id=id)
@@ -74,6 +81,8 @@ class GameComment(View):
 
 
 class CreatePost(View):
+    """ View to create a new post"""
+
 
     def get(self, request, ref_name):
         if request.user.is_authenticated:
@@ -87,8 +96,6 @@ class CreatePost(View):
         return render(request, "403.html")
 
     def post(self, request, ref_name):
-        # game_obj = Game.objects.get(ref_name=ref_name)
-
         post_form = PostForm(data=request.POST)
         if post_form.is_valid():
             post_form.instance.name = request.user.username
@@ -96,7 +103,6 @@ class CreatePost(View):
             post.author = get_user(request)
             post.game = Game.objects.get(ref_name=ref_name)
             post.save()
-            # return HttpResponseRedirect('game_page' 'ref_name')
             url = request.POST.get("url")
             messages.success(
                 request,
@@ -113,6 +119,7 @@ class CreatePost(View):
 
 
 class EditPost(View):
+    """ View to edit a post"""
 
     def get(self, request, id):
         post = get_object_or_404(Post, id=id)
@@ -149,6 +156,8 @@ class EditPost(View):
 
 
 def delete_post(request, id):
+    """ Method to delete a post"""
+
     post = get_object_or_404(Post, id=id)
     if post.author.id == request.user.id:
         game_obj = post.game
@@ -160,10 +169,11 @@ def delete_post(request, id):
 
 
 def delete_comment(request, id):
+    """ Method to delete a comment"""
+
     comment = get_object_or_404(Comment, id=id)
     if comment.author.id == request.user.id:
         comment.delete()
-        # return redirect(reverse("post_page"), args=(comment.post.id))
         url = comment.post.id
         print(url)
         messages.success(
