@@ -21,13 +21,33 @@ You can visit the live website [here](https://partyupgaming.herokuapp.com/)
 
 # UX
 
-The project has been completed using the core UX principles to ensure an efficient and easy to use app was created that had a distinct purpose and provided satisfaction to users
+The project has been completed using the core UX design thinking principles to ensure an efficient and easy to use app was created that had a distinct purpose and provided satisfaction to users. The project was created mobile-first and agile practices were also followed.
 
 ## Strategy 
 
-Goals -
-Mobile first design
-Agile work
+
+The primary goals of the website admins are:
+- To create, update and delete Game posts and comments
+- To be able to see view and delete the posts and comments of others.
+
+The primary goals of the website users are: 
+- To register for an account on the website. 
+- To sign in and sign out of the website. 
+- To connect with other users
+- To View a list of all available game forums
+- To enter each forum and see the all the posts created
+- To view the details of each post and see any comments made on the post
+
+
+## Structure
+### Website pages
+- The website currently has a landing page and 6 game pages but was built so that additional game pages can be created quickly.
+- All pages extend the same base html file, so they have the same look.
+- Pages are described below.
+
+### Database
+- The project uses a relational database (PostgreSQL)
+- Data is handled by the application with Django
 
 ## Target Audience
 
@@ -64,24 +84,93 @@ The target audience of this website is any person who :
 * As a registered user I can create posts so that I can find other gamers who want to achieve the same things
 * As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
+## Agile
+
 An agile approach was used for creating this website. The project board can be found here: [Kanban](https://github.com/users/LordButley/projects/1/views/1)
 
-## Structure
-
+Where possible I worked within sprints to achieve the goals set for that sprint. User stories were created along with a Kanban board. As this work has been largely completed alongside the day job and the family commitments, the sprints themselves had to be fluid. This resulted in the project loosely being contained with 4 sprints. Sprint 1 and 2 were more standard in that the MoSoCo importances were added to user stories and worked towards during a set length of time. These can be seen in the Kanban board. For sprints 3 and 4, they were more akin to actual sprinting where I was doing everything in all my free time to dash for the finish line.
 
 ## Skeleton
+
+The project was created using a mobile first perspective and as such only mobile wireframes were created.
+
+[Wireframes](media/readme/Wireframes.JPG) 
+
+## Design
+
+### Font
+
+"Permanent Marker" font was used for the logo and main title as it characterises the playful yet impactful nature of the website. It was not however used for posts and comments due to it's less than perfect readability when smaller.
+"Montserrat" was used for all post and comment text due to it's crisp readability.
+
+### Colors
+
+The website needed to be a blank slate as it needed to contain lots of different coloured icons for each game. This basically meant the background had to be white or black. However I decided on black with red highlighting as it suited the images more and is inline with the gaming industry standard of clean, impactful colours with high contrast.
 
 # Features
 
 ## Existing Features
 
-### Home page and menu
+### Home page
 
-### How to use
+![Homepage1](media/readme/homepage1.JPG)
+![Homepage2](media/readme/homepage2.JPG)
+
+The homepage consists of a brief introduction of the website followed by clickable tiles which take you to the individual game pages
+
+### Navigation
+
+![Navbar](media/readme/navbar.JPG)
+![Footer](media/readme/footer.JPG)
+
+The burger bar expands to reveal login capabilities as well as a drop down of all the available games. All user feedback responses are highlighted in crimson.
+The footer icons open onto new tabs and direct to the relevant pages
+
+
+### Game page
+
+![Gamepage](media/readme/gamepage.JPG)
+
+The game page shows a list of posts relating to that game. If you aren't logged in you will not be able to see the "Create new post" button. Likewise if you are not logged in or you did not create the initial post you will not see the edit and delete icons on each post.
+
+### Post page
+
+![Postpage](media/readme/postpage.JPG)
+
+The post page shows the post content and a list of comments relating to it. If you aren't logged in you will not be able to see the "Create new comment" section. Likewise if you are not logged in or you did not create the initial post you will not see the delete icons on each post. There is no edit functionality for comments specifically in keeping with modern trends.
+
+
+### Login / Logout / Register
+
+![Login](media/readme/signin.JPG)
+![Logout](media/readme/signout.JPG)
+![Postpage](media/readme/register.JPG)
+
+The login, logout and postpage section are all styled in the same crisp edgey way with a similarly sharp background.
+
+### Feedback
+
+Messages pop up with new posts and comments are created, updated (only posts) and deleted. Note there is no success message if you do not change page and you can instantly see the result such as when you post a comment.
+There is also crimson colour feedback when you hover over an interactive element.
 
 ### Data and Database
 
+The data base is split into 3 different models:
+
+Game, Post and Comment
+
 ## Features to implement in the future
+
+First I would target the Use stories that did not get completed:
+
+* As a logged in user I can change the details on my profile page so that all my details and information are up to date
+* As a logged in user I can view my profile page so that I can see my personal account details
+* As a registered user I can set a password so that so that my account is secure
+* As a registered user I can request a new password in case I forget my own so that I can regain access to my account
+* As a user I can contact the website so that I can provide feedback or present queries
+* As an unregistered user I can create an account so that I can interact fully with the website
+* As an unregistered user I can easily find the sign up page so that I can register and interact with the website
+* As a registered user I can delete my account so that ensure my details are removed after I no longer want to use it
 
 ## Technologies Used
 
@@ -91,13 +180,13 @@ An agile approach was used for creating this website. The project board can be f
       - Programming language providing content and logic of project
 
  2. [HTML](https://en.wikipedia.org/wiki/HTML) 
- - Programming language providing content and structure of website.
+      - Programming language providing content and structure of website.
 
  3. [CSS](https://en.wikipedia.org/wiki/CSS) 
- - Programming language providing styling of website.
+      - Programming language providing styling of website.
 
  4. [JavaScript](https://en.wikipedia.org/wiki/Javascript)
- - Programming language used for the functions and interactivity behind the quiz.
+      - Programming language used for the functions and interactivity behind the quiz.
  
  ### Frameworks, Libraries & Programs Used:
 
@@ -111,9 +200,6 @@ An agile approach was used for creating this website. The project board can be f
  3. [Heroku](https://www.heroku.com/)
     - Cloud application platform used to host program
 
- 4. [app.diagram.net](app.diagram.net)
-    - Used to create process diagram. 
-
  5. Python Libraries:
     - os - Used to clear the terminal
     - time - Used for creating a timer
@@ -122,8 +208,12 @@ An agile approach was used for creating this website. The project board can be f
     - string - Used for capitalizing input to match that of the database
     - gspread and google.oauth2.service_account for linking google sheets
 
- 6.[http://pep8online.com/](http://pep8online.com/)
+ 6. [https://pep8ci.herokuapp.com/](https://pep8ci.herokuapp.com/)
     - PEP8 Validator used to check code for compliance
+
+ 7. [HTML Validator](https://validator.w3.org/nu/)
+
+ 8. [CSS Validator](https://jigsaw.w3.org/css-validator/validator)
 
 ## Testing
 
@@ -179,8 +269,9 @@ Heroku was used to deploy the site and it was achieved by following the steps be
 
 ### Code
 
+I learned how to write this project using the code institute walk through projects and as such some of the code structuring may be similar.
+
 ### Thanks
 
 - to tutor support at Code Institute. I have constantly found their positivity and genuine interest in helping resolve issues in my code a great help 
-- to my mentor, Richard Wells, who reviewed my project and gave feedback.
 - to my partner who is always willing to test everything I create 
