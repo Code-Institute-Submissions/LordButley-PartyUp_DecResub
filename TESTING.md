@@ -29,9 +29,36 @@ All errors except 1 type were removed. These errors were in the form "Class 'Cla
 
 ## User Story Testing
 
-# UX
+User story testing was completed on the following completed user stories:
 
-The project has been completed using the core UX principles to ensure an efficient and easy to use app was created that had a distinct purpose and provided satisfaction to users
+* As an unregistered user I can view each post on the website so that I can select one to read and decide whether to sign up
+   - In incognito mode, I travelled to each Game page and then each post page to verify that you could access without logining in
+
+* As a user I can navigate intuitively so that I can view the desired content
+   - The navigation bar at the top was viewed across different screen sizes to ensure that all parts were still visible
+   - The links were all used to see if they worked correctly
+   - There is feedback on every navigation button when hovered over
+
+* As an admin I can create, remove, update or delete posts so that I can ensure site content is relevant and inoffensive
+   - CRUD functionality tested and all works.
+   - Attempts to by pass the need to be logged in were made
+* As an Admin I can log out of the admin panel so that I can disconnect from the website
+* As an admin I can log in so that I can access the sites backend
+* As a user I can access social media accounts connected to the website so that I may learn more about the company
+* As a user I can quickly identify the purpose of the website from the landing page so that determine if the website is relevant to me
+* As a registered user I can login and logout of my account so that I can access and keep secure my data
+* As a registered user I can set a password so that so that my account is secure
+* As a registered user I can request a new password in case I forget my own so that I can regain access to my account
+* As a user I can contact the website so that I can provide feedback or present queries
+* As an unregistered user I can create an account so that I can interact fully with the website
+* As an unregistered user I can easily find the sign up page so that I can register and interact with the website
+* As a user I can fill in my personal details on my account page so that I can auto populate forms with my information on the site
+* As a registered user I can delete my account so that ensure my details are removed after I no longer want to use it
+* As a registered user I can comment on posts so that I can connect with other gamers
+* As a registered user I can delete my posts so that my post are no longer visible and I will receive no further messages
+* As a registered user I can update my posts so that I can keep my posts relevant and up to date with information
+* As a registered user I can create posts so that I can find other gamers who want to achieve the same things
+* As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
 ## Strategy 
 

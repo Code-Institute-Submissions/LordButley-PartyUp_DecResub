@@ -64,7 +64,7 @@ The target audience of this website is any person who :
 * As a registered user I can create posts so that I can find other gamers who want to achieve the same things
 * As a user I can easily see if I am logged in or not so that I can choose to login or logout depending on what I want to do
 
-An agile approach was used for creating this website. The project board can be found here: [Kanbad](https://github.com/users/LordButley/projects/1/views/1)
+An agile approach was used for creating this website. The project board can be found here: [Kanban](https://github.com/users/LordButley/projects/1/views/1)
 
 ## Structure
 

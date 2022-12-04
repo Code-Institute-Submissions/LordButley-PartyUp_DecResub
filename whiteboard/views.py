@@ -76,13 +76,15 @@ class GameComment(View):
 class CreatePost(View):
 
     def get(self, request, ref_name):
-        game_obj = Game.objects.get(ref_name=ref_name)
-        return render(request, 'create_post.html',
-                      {
-                          "post_form": PostForm(),
-                          "game": game_obj
-                      }
-                      )
+        if request.user.is_authenticated:
+            game_obj = Game.objects.get(ref_name=ref_name)
+            return render(request, 'create_post.html',
+                        {
+                            "post_form": PostForm(),
+                            "game": game_obj
+                        }
+                        )
+        return render(request, "403.html")
 
     def post(self, request, ref_name):
         # game_obj = Game.objects.get(ref_name=ref_name)
