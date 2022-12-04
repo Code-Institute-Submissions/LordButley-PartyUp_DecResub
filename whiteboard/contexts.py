@@ -1,5 +1,6 @@
 from .models import Game
 
+
 def extra_context(request):
     """
     Provides global access to some model
